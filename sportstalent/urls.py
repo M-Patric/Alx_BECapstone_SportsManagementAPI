@@ -18,8 +18,11 @@ Including another URLconf
 # sports_api/urls.py
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
 
 urlpatterns = [
+    path('', lambda request: HttpResponse("Welcome to the Sports Talent Management API ")),
     path("admin/", admin.site.urls),
     path("api/users/", include("users.urls")),               # user registration / login / me
     path("api/profiles/", include("profiles.urls")),         # athletes/coaches/agents
