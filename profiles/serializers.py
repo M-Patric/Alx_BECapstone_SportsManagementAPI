@@ -12,6 +12,7 @@ class AthleteProfileSerializer(serializers.ModelSerializer):
         fields = ["id", "user", "full_name", "sport_type", "birth_date", "location", "skill_level", "bio", "profile_photo", "created_at", "updated_at"]
 
 class AthleteProfileCreateSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
     class Meta:
         model = AthleteProfile
         exclude = ("created_at", "updated_at",)
