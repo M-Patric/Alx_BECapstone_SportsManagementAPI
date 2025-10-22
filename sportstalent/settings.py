@@ -79,16 +79,19 @@ TEMPLATES = [
 WSGI_APPLICATION = "sportstalent.wsgi.application"
 
 # Database: uses DATABASE_URL if set (Heroku), otherwise sqlite
-DATABASE_URL = os.getenv("DATABASE_URL", "")
-if DATABASE_URL:
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+if DATABASE_URL and DATABASE_URL.strip() and DATABASE_URL.strip() != "://":
     DATABASES = {"default": dj_database_url.parse(DATABASE_URL, conn_max_age=600)}
 else:
+    # Local fallback to SQLite
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
             "NAME": BASE_DIR / "db.sqlite3",
         }
     }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
