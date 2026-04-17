@@ -1,37 +1,37 @@
-🏆 Sports Talent Management API
+Sports Talent Management API
 
 A Django REST Framework Project (ALX Backend Capstone)
 
-📋 Overview
+Overview
 
 The Sports Talent Management API is a backend system designed to manage athletes, training sessions, matches, and achievements.
 It allows users (coaches, scouts, or admins) to register, authenticate, and manage all data through RESTful endpoints.
 
 This API is secure, modular, and deployed live on Render.
 
-🌐 Live API URL
+Live API URL
 
-👉 Base URL: https://sportstalent.onrender.com
+Base URL: https://sportstalent.onrender.com
  
-🚀 Features
+Features
 
-🔐 User Authentication using Django REST Token Auth
+User Authentication using Django REST Token Auth
 
-🧍 Athlete Profiles — add, view, update, and delete athlete details
+Athlete Profiles — add, view, update, and delete athlete details
 
-🏋🏽 Training Sessions — track sessions, attendance, and feedback
+Training Sessions — track sessions, attendance, and feedback
 
-🏅 Achievements — record and manage athlete awards
+Achievements — record and manage athlete awards
 
-⚽ Matches — log and analyze match details and outcomes
+Matches — log and analyze match details and outcomes
 
-☁️ .env Configuration for security and portability
+ .env Configuration for security and portability
 
-🧩 Modular App Structure for scalability
+Modular App Structure for scalability
 
-🌍 Fully Deployed on Render
+Fully Deployed on Render
 
-🏗️ Project Structure
+Project Structure
 Alx_BECapstone_SportsManagementAPI/
 │
 ├── manage.py
@@ -80,32 +80,32 @@ Alx_BECapstone_SportsManagementAPI/
     ├── urls.py
     └── tests.py
 
-⚙️ Installation (Local Setup)
+ Installation (Local Setup)
 git clone https://github.com/<M-Patric>/Alx_BECapstone_SportsManagementAPI.git
 cd Alx_BECapstone_SportsManagementAPI
 
-1️⃣ Create Virtual Environment
+Create Virtual Environment
 py -m venv venv
 source venv/Scripts/activate  # or venv\Scripts\activate
 
-2️⃣ Install Dependencies
+Install Dependencies
 pip install -r requirements.txt
 
-3️⃣ Create .env File
+Create .env File
 SECRET_KEY=your_django_secret_key
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1,localhost
 
-4️⃣ Apply Migrations
+Apply Migrations
 python manage.py migrate
 
-5️⃣ Create Superuser
+Create Superuser
 python manage.py createsuperuser
 
-6️⃣ Run Server
+Run Server
 python manage.py runserver
 
-🧪 API Endpoints
+API Endpoints
 Feature	Method	Endpoint	Description
 Auth	POST	/api/users/register/	Register new user
 Auth	POST	/api/users/login/	User login and token generation
@@ -114,8 +114,8 @@ Athletes	PUT/DELETE	/api/athletes/<id>/	Update or delete profile
 Training Sessions	GET/POST	/api/trainings/	Manage sessions
 Achievements	GET/POST	/api/achievements/	Manage awards
 Matches	GET/POST	/api/matches/	Manage match records
-🧠 Progress Report
-✅ What I’ve Accomplished
+ Progress Report
+ What I’ve Accomplished
 
 Set up Django and Django REST Framework environment
 
@@ -129,7 +129,7 @@ Deployed API successfully on Render
 
 Tested all endpoints using Postman
 
-⚠️ Challenges Faced
+ Challenges Faced
 
 Environment activation not reflecting initially (resolved by proper source venv/Scripts/activate)
 
@@ -137,7 +137,7 @@ Path confusion during migrations (fixed by keeping apps under project root)
 
 Render build settings (resolved with correct gunicorn command and Procfile)
 
-🚀 What’s Next
+ What’s Next
 
 Implement more complex query filters (e.g., filter training sessions by athlete or date)
 
@@ -145,7 +145,7 @@ Improve validation and authentication responses
 
 Prepare for final capstone presentation
 
-🧩 Deployment on Render
+ Deployment on Render
 
 Your Render configuration should look like this:
 
